@@ -13,10 +13,20 @@ const StyledHero = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   padding: theme.spacing(2),
+
+  [theme.breakpoints.up('xs')]: {
+    paddingTop:"100px"
+
+  },
+  [theme.breakpoints.up('md')]: {
+    paddingTop:"0"
+  }
+
+
 }));
 
 const StyledImg = styled("img")(() => ({
-  width: "100%",
+  width: "75%",
   maxWidth: "250px",
   borderRadius: "50%",
   border: `2px solid ${theme.palette.primary.contrastText}`,
@@ -54,10 +64,10 @@ const Hero = () => {
             />
           </Grid>
           <Grid item xs={12} md={7} textAlign="center">
-            <Typography color="primary.contrastText" variant="h1" pb={2}>
+            <Typography color="primary.contrastText" variant="h2" pb={2}>
               Vitor Muniz
             </Typography>
-            <Typography color="primary.contrastText" variant="h2">
+            <Typography color="primary.contrastText" variant="h3">
               I'm a Software Developer
             </Typography>
             <Grid container spacing={2} justifyContent="center" mt={2} pt={3}>
