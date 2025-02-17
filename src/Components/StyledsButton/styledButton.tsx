@@ -20,12 +20,13 @@ const Button = styled("button")(({theme}) => ({
 
 interface StyledButtonProps {
   children: ReactNode
+  onClick: () => void
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({children}) => {
+const StyledButton: React.FC<StyledButtonProps> = ({children, onClick}) => {
   return (
     <>
-      <Button>{children}</Button>
+      <Button onClick={onClick}>{children}</Button>
     </>
   );
 };
