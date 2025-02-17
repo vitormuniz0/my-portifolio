@@ -29,22 +29,38 @@ const Hero = () => {
     <StyledHero>
       <Container maxWidth="lg">
         <Grid container spacing={2} alignItems="center" justifyContent="center">
-          <Grid item xs={12} md={5} textAlign="center">
-            <Box position="relative" display="inline-block">
-              <Box position="absolute" width={"150%"} top={-100} right={0} zIndex={-1}>
-                <AnimatedBackground />
-              </Box>
-              <StyledImg src={Avatar} alt="Avatar" />
+          <Grid
+            item
+            xs={12}
+            md={5}
+            textAlign="center"
+            display="flex"
+            justifyContent="center"
+            position="relative"
+          >
+            <Box
+              position="absolute"
+              width={"100%"}
+              top={-100}
+              height="100%"
+              zIndex={0}
+            >
+              <AnimatedBackground />
             </Box>
+            <StyledImg
+              src={Avatar}
+              alt="Avatar"
+              style={{ position: "relative", zIndex: 1 }}
+            />
           </Grid>
           <Grid item xs={12} md={7} textAlign="center">
-            <Typography color="primary.contrastText" variant="h3">
+            <Typography color="primary.contrastText" variant="h1" pb={2}>
               Vitor Muniz
             </Typography>
-            <Typography color="primary.contrastText" variant="h5">
+            <Typography color="primary.contrastText" variant="h2">
               I'm a Software Developer
             </Typography>
-            <Grid container spacing={2} justifyContent="center" mt={2}>
+            <Grid container spacing={2} justifyContent="center" mt={2} pt={3}>
               <Grid item xs={12} sm={6} md={4}>
                 <StyledButton>
                   <DownloadIcon />
